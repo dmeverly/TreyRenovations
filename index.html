@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <title>Trey Renovations</title>
+    <meta name="description"
+        content="Before and after photos of painting, flooring, furniture refinishing, organization, and room remodel projects by Trey Renovations." />
+    <meta content="#FAF8F4" name="theme-color" />
+
+    <link href="assets/img/favicon.ico" rel="icon" sizes="any">
+    <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="assets/img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/site.webmanifest" rel="manifest">
+
+    <link href="assets/css/fonts.css" rel="stylesheet" />
+    <link href="assets/css/tokens.css" rel="stylesheet" />
+    <link href="assets/css/components.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="#top">
+                <img alt="" class="brand__mark" height="30" src="assets/img/mark.svg" width="30" />
+                <span>Trey Renovations</span>
+            </a>
+
+            <nav aria-label="Primary navigation" class="site-nav">
+                <a class="site-nav__link" href="#projects">Projects</a>
+                <a class="btn btn-outline btn-sm" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="intro">
+            <div class="container intro__grid">
+                <div class="reveal">
+                    <p class="eyebrow">Before &amp; after portfolio</p>
+
+                    <h1 class="intro__title">
+                        Tired spaces,<br />
+                        <span class="accent">made new.</span>
+                    </h1>
+
+                    <p class="intro__lede">
+                        I'm Trey. I paint, lay flooring, refinish furniture, and organize and remodel rooms.
+                        Every project here is shown before and after, so you can see the change for yourself.
+                    </p>
+
+                    <div class="intro__cta">
+                        <a class="btn btn-primary" href="#projects">
+                            See the projects <span aria-hidden="true">↓</span>
+                        </a>
+                        <a class="btn btn-outline" href="#contact">Get in touch</a>
+                    </div>
+
+                    <ul aria-label="Services" class="intro__services" id="intro-services"></ul>
+                </div>
+
+                <div class="reveal">
+                    <div class="compare" data-project="garage-stairs" id="intro-compare">
+                        <img alt="Garage stairs before: bare, worn wood" class="compare__img" height="1600"
+                            src="assets/img/projects/garage-stairs/before-1.jpg" width="1200" />
+                        <img alt="Garage stairs after: stained treads with painted risers"
+                            class="compare__img compare__img--after" height="1600"
+                            src="assets/img/projects/garage-stairs/after-2.jpg" width="1381" />
+                        <span class="stage-label stage-label--before">Before</span>
+                        <span class="stage-label stage-label--after">After</span>
+                        <span aria-hidden="true" class="compare__divider">
+                            <span class="compare__knob">‹›</span>
+                        </span>
+                        <input aria-label="Slide to compare before and after" class="compare__range" max="100"
+                            min="0" step="1" type="range" value="50" />
+                    </div>
+                    <p class="intro__caption">
+                        <span>Garage stairs. Drag to compare.</span>
+                        <span id="intro-more"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured" id="featured">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Featured</p>
+                        <h2 class="section-head__title">Same spot, new space</h2>
+                    </div>
+                    <p class="section-head__hint">Drag the handle on each photo to wipe between before and after.</p>
+                </div>
+
+                <div class="featured__row" id="featured-row"></div>
+            </div>
+        </section>
+
+        <section class="work" id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Projects</p>
+                        <h2 class="section-head__title">More of the work</h2>
+                    </div>
+                    <p class="section-head__hint">Tap a project to open it and swipe through the photos.</p>
+                </div>
+
+                <div aria-label="Filter projects by category" class="filters reveal" id="project-filters"
+                    role="group"></div>
+
+                <div class="gallery" id="projects-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contact" id="contact">
+        <div class="container">
+            <div class="reveal">
+                <p class="eyebrow">Contact</p>
+                <h2 class="contact__title">Have a project in mind?</h2>
+                <p class="contact__lede">
+                    Tell me about the room, the floor, or the piece of furniture, and send a photo if you have one.
+                </p>
+                <div class="contact__links" id="contact-links"></div>
+            </div>
+
+            <div class="contact__meta">
+                <span>© 2026 Trey Renovations</span>
+                <span>
+                    Site by
+                    <a class="contact__credit" href="https://www.dmeverly.com" rel="noopener" target="_blank">David Everly</a>
+                </span>
+            </div>
+            <p class="contact__legal">
+                Photos show past projects completed by Trey Renovations. They are examples of previous work,
+                not a quote or a guarantee of results for any future project.
+            </p>
+        </div>
+    </footer>
+
+    <dialog aria-labelledby="lightbox-title" class="lightbox" id="lightbox">
+        <header class="lightbox__header">
+            <h3 class="lightbox__title" id="lightbox-title"></h3>
+            <span aria-live="polite" class="lightbox__counter" id="lightbox-counter"></span>
+            <button aria-label="Close" class="lightbox__close" id="lightbox-close" type="button">✕</button>
+        </header>
+
+        <div class="lightbox__stage">
+            <div class="lightbox__track" id="lightbox-track" tabindex="0"></div>
+            <button aria-label="Previous photo" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev"
+                type="button">‹</button>
+            <button aria-label="Next photo" class="lightbox__nav lightbox__nav--next" id="lightbox-next"
+                type="button">›</button>
+        </div>
+    </dialog>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/site.js"></script>
+</body>
+
+</html>
